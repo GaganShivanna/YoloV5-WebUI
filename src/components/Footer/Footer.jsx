@@ -45,32 +45,25 @@ const Footer = () => {
       <StackColumn>
         <FooterTitle text={'address'} />
         <FooterLink 
-        text={'15th Louis St, london 92382, eng'} 
+        text={'Bengaluru, 560109'} 
         />
         <FooterLink 
-        text={'25 999-345-10800'} 
+        text={'+91 99999 99999'} 
         />
         <FooterLink 
-        text={'info@housesales.com'} 
+        text={'pcb@gmail.com'} 
         />
       </StackColumn>
       
       <StackColumn>
-        <FooterTitle text={'our services'} />
-        <FooterLink text={'buy house'} />
-        <FooterLink text={'sell house'} />
-        <FooterLink text={'rent house'} />
-        <FooterLink text={'build house'} />
-      </StackColumn>
-      <StackColumn>
-        <FooterTitle text={'our company'} />
+        <FooterTitle text={'our Team'} />
         <FooterLink text={'reporting'} />
         <FooterLink text={'get in touch'} />
         <FooterLink text={'management'} />
       </StackColumn>
 
       <StackColumn>
-        <FooterTitle text={'hBSales'} />
+        <FooterTitle text={'Pegasus Corp'} />
         <Stack 
         direction='row' 
         width= '70px'
@@ -102,7 +95,7 @@ const Footer = () => {
         variant='caption'
         component='p' 
         >
-          &copy; 2022 HBSales Inc.
+          &copy; A Product by Gagan Shivanna IN
         </Typography>
       </StackColumn>
     </BoxRow>

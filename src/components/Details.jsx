@@ -33,14 +33,14 @@ const Details = () => {
         >
             <Title 
             text={
-                'Interesting to buy property'
+                'Interested to Build Somethin More Asthetic, Contact Us'
                 } 
             textAlign={'center'}
             />
             <Paragraph 
             text={
-                'If you are interested to buy the property contact us we will call you. \
-                Shortly to fulfill you requirements and property.'
+                'If you are interested, contact us we will call you \
+                Shortly to fulfill your requirements.'
             }
             maxWidth = {'sm'}
             mx={0}

@@ -1,122 +1,115 @@
-import React,{ useState } from 'react'
-// mui
-import { 
-    Typography,
-    Box,
-    Stack,
-} from "@mui/material";
-// carousel
+import React, { useState } from 'react';
+// MUI components
+import { Typography, Box, Stack } from "@mui/material";
+// Carousel styles
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-// components
-import Title from './Title'
-import Paragraph from './Paragraph'
+// Components
+import Title from './Title';
+import Paragraph from './Paragraph';
+
+// Import images from assets
+import Grppic from '../assets/Grppic.jpeg';
+import Gg from "../assets/Gg.jpeg";
+import Adi from '../assets/Adi.jpeg';
+import Karthik from '../assets/Karthik.jpeg';
+import Ragh_sir from '../assets/Ragh_sir.jpeg';
+
 
 
 const Gallery = () => {
-    
-    const [currentIndex, setCurrentIndex] = useState();
+    const [currentIndex, setCurrentIndex] = useState(0); // Initialize currentIndex
 
     const imageData = [
-        {
-            alt: 'image1',
-            url: 'https://images.pexels.com/photos/259751/pexels-photo-259751.jpeg?cs=srgb&dl=pexels-pixabay-259751.jpg&fm=jpg'
-        },
-        {
-            alt: 'image2',
-            url: 'https://images.pexels.com/photos/5411784/pexels-photo-5411784.jpeg?cs=srgb&dl=pexels-andrea-davis-5411784.jpg&fm=jpg'
-        },
-        {
-            alt: "image3",
-            url: 'https://images.pexels.com/photos/356809/pexels-photo-356809.jpeg?cs=srgb&dl=pexels-daniel-frank-356809.jpg&fm=jpg'
-        },
-        {
-            alt: "image4",
-            url: 'https://images.pexels.com/photos/6267516/pexels-photo-6267516.jpeg?cs=srgb&dl=pexels-get-lost-mike-6267516.jpg&fm=jpg'
-        },
-        {
-            alt: "image5",
-            url: 'https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?cs=srgb&dl=pexels-huseyn-kamaladdin-667838.jpg&fm=jpg'
-        },
+        { alt: 'Ragh_sir', url: Ragh_sir },
+        { alt: 'Grppic', url: Grppic },
+        { alt: 'Gg', url: Gg },
+        { alt: 'Adi', url: Adi },
+        { alt: 'Karthik', url: Karthik },
     ];
-  
-    const renderSlides = imageData.map((image) => (
-    <div key={image.alt}>
-        <img src={image.url} alt={image.alt} />
-    </div>
-    ));
 
+    const renderSlides = imageData.map((image, index) => (
+        <div key={index} style={{ position: 'relative', maxWidth: '100%', height: 'auto' }}>
+            <div style={{ position: 'absolute', top: 10, left: 10, zIndex: 1, color: '#fff', background: 'rgba(0, 0, 0, 0.5)', padding: '4px 8px', borderRadius: '4px' }}>
+                Image {index + 1}
+            </div>
+            <img
+                src={image.url}
+                alt={image.alt}
+                style={{
+                    maxWidth: '300px',
+                    height: 'auto',
+                    maxHeight: '400px', // Adjust the maximum height as per your requirement
+                    zIndex: 0,
+                }}
+            />
+        </div>
+    ));
 
     const handleChange = (index) => {
         setCurrentIndex(index);
-    }
+    };
 
     return (
         <Stack
-        direction='column'
-        justifyContent= 'center'
-        alignItems= 'center'
-        sx={{
-            py: 8,
-            px: 2,
-            display: { xs: 'flex'},
-        }}
+            direction='column'
+            justifyContent='center'
+            alignItems='center'
+            sx={{
+                py: 8,
+                px: 2,
+                display: { xs: 'flex' },
+            }}
         >
             <Box
-            component='section'
-            sx={{
-                paddingBottom: 3,
-            }}
+                component='section'
+                sx={{
+                    paddingBottom: 3,
+                }}
             >
-                <Title 
-                text={
-                    'Plans and dimension'
-                }
-                textAlign={'center'}
+                <Title
+                    text={'Meet our Team and Mentor'}
+                    textAlign={'center'}
                 />
                 <Typography
-                variant='h5'
-                component='h4'
-                align='center'
-                sx={{
-                    paddingTop: 1,
-                }}
+                    variant='h5'
+                    component='h4'
+                    align='center'
+                    sx={{
+                        paddingTop: 1,
+                    }}
                 >
-                    Rooms Gallery
+                    Team Member Pictures
                 </Typography>
-                <Paragraph text={
-                    'We have more 5000 reviews and our\
-                    customers trust on our quality product\
-                    and trust own our product. If you interested,\
-                    contact us.'
-                } 
-                maxWidth = {'sm'}
-                mx={'auto'}
-                textAlign={'center'}
+                <Paragraph
+                    text={'TeamPegasus has gained significant exposure through prestigious platforms like the Smart India Hackathon, where we emerged as winners, and participation in Manthan round 2. With a proven track record, we bring expertise and innovation to every project, delivering impactful solutions tailored to complex technological challenges.'}
+                    maxWidth={'sm'}
+                    mx={'auto'}
+                    textAlign={'center'}
                 />
             </Box>
-            
-            <Box sx={{ 
+
+            <Box sx={{
                 maxWidth: 700,
                 width: '100%',
             }}>
                 <Carousel
-                centerSlidePercentage={40}
-                thumbWidth={180}
-                dynamicHeight={false}
-                centerMode={false}
-                showArrows={false}
-                autoPlay={false}
-                infiniteLoop={true}
-                selectedItem={imageData[currentIndex]}
-                onChange={handleChange}
-                className="carousel-container"
+                    centerSlidePercentage={40}
+                    thumbWidth={180}
+                    dynamicHeight={false}
+                    centerMode={false}
+                    showArrows={false}
+                    autoPlay={false}
+                    infiniteLoop={true}
+                    selectedItem={imageData[currentIndex]}
+                    onChange={handleChange}
+                    className="carousel-container"
                 >
-                {renderSlides}
+                    {renderSlides}
                 </Carousel>
             </Box>
         </Stack>
-    )
-}
+    );
+};
 
-export default Gallery
+export default Gallery;

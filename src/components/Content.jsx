@@ -7,12 +7,13 @@ import {
     CardContent,
 } from "@mui/material";
 // icons
-import SportsGymnasticsIcon from '@mui/icons-material/SportsGymnastics';
-import LocalParkingIcon from '@mui/icons-material/LocalParking';
+
 import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded';
-import FastfoodOutlinedIcon from '@mui/icons-material/FastfoodOutlined';
-import PoolOutlinedIcon from '@mui/icons-material/PoolOutlined';
-import WifiPasswordIcon from '@mui/icons-material/WifiPassword';
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
+import JavascriptIcon from '@mui/icons-material/Javascript';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import BookOnlineIcon from '@mui/icons-material/BookOnline';
+import CssIcon from '@mui/icons-material/Css';
 // components
 import Title from './Title'
 import Paragraph from './Paragraph'
@@ -35,7 +36,7 @@ const Content = () => {
             >
                 <Title
                 text={
-                    'What we are offering?'
+                    'Services We Offer at TeamPegasus?'
                 }
                 textAlign={'start'}
                 />
@@ -48,14 +49,12 @@ const Content = () => {
                     paddingTop: 1,
                 }}
                 >
-                    Property facilities
+                    Skill Sets
                 </Typography>
 
                 <Paragraph 
                 text={
-                    ' We have more 5000 reviews\
-                    and our customers trust on out quality\
-                    product and trust own our product.'
+                    ' TeamPegasus, winners of the Smart India Hackathon\ and participants in Manthan round 2,\ excels in providing expert solutions \that effectively address complex challenges.'
                 }
                 maxWidth = {'75%'}
                 mx={0}
@@ -77,7 +76,7 @@ const Content = () => {
                 }}>
                     <CardContent>
                         <IconButton>
-                            <SportsGymnasticsIcon 
+                            <CurrencyBitcoinIcon 
                             fontSize="large"
                             color="secondary" />
                         </IconButton>
@@ -89,7 +88,7 @@ const Content = () => {
                             textTransform: 'capitalize',
                         }}
                         >
-                        gym
+                        BlockChain
                         </Typography>
                     </CardContent>
                 </Card>
@@ -109,7 +108,7 @@ const Content = () => {
                 }}>
                     <CardContent>
                         <IconButton>
-                            <LocalParkingIcon 
+                            <JavascriptIcon
                             fontSize="large"
                             color="secondary" />
                         </IconButton>
@@ -121,7 +120,7 @@ const Content = () => {
                             textTransform: 'capitalize',
                         }}
                         >
-                        parking
+                        JavaScript
                         </Typography>
                     </CardContent>
                 </Card>
@@ -165,7 +164,7 @@ const Content = () => {
                 }}>
                     <CardContent>
                         <IconButton>
-                            <FastfoodOutlinedIcon
+                            <DashboardIcon
                             fontSize="large"
                             color="secondary" />
                         </IconButton>
@@ -177,7 +176,7 @@ const Content = () => {
                             textTransform: 'capitalize',
                         }}
                         >
-                        local dining
+                        WEBSITE 
                         </Typography>
                     </CardContent>
                 </Card>
@@ -198,7 +197,7 @@ const Content = () => {
                 >
                     <CardContent>
                         <IconButton>
-                            <PoolOutlinedIcon 
+                            <BookOnlineIcon 
                             fontSize="large"
                             color="secondary" />
                         </IconButton>
@@ -210,7 +209,7 @@ const Content = () => {
                             textTransform: 'capitalize',
                         }}
                         >
-                        swimming pool
+                        MOBILE APP
                         </Typography>
                     </CardContent>
                 </Card>
@@ -230,7 +229,7 @@ const Content = () => {
                 }}>
                     <CardContent>
                         <IconButton>
-                            <WifiPasswordIcon
+                            <CssIcon
                             fontSize="large"
                             color="secondary" />
                         </IconButton>
@@ -242,7 +241,7 @@ const Content = () => {
                             textTransform: 'capitalize',
                         }}
                         >
-                        Internet
+                        CASCADING STYLE SHEETS
                         </Typography>
                     </CardContent>
                 </Card>

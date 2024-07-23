@@ -7,8 +7,8 @@ import {
 } from '@mui/material'
 import Title from './Title'
 // img
-import imgDetail from '../assets/pexels-alex-staudinger-1732414.jpg';
-import imgDetail2 from '../assets/pexels-pixabay-271816.jpg';
+import rct from '../assets/rct.png';
+import materialUI from '../assets/materialUI.jpg';
 
 
 const GetStarted = () => {
@@ -47,21 +47,19 @@ const GetStarted = () => {
                 >
                     <Title
                     text={
-                        'We make it easy for tenants and landlords'
+                        'This Project is build using React JS'
                     }
                     textAlign={'start'}
                     />
                     <CustomTypography>
-                        Listing are updated continuously so you<br />
-                        won't miss out on homes that just hit<br />
-                        market until you find your perfect home.
+                    React.js is a popular JavaScript library developed by Facebook for building user interfaces, particularly single-page applications  where data changes over time.<br/> It allows developers to create reusable UI components, enhancing development efficiency and consistency. <br/>React's virtual DOM efficiently updates and renders only the necessary components, improving performance and user experience.
                     </CustomTypography> 
                 </Box>
 
             </CustomGridItem>
             
             <Grid item xs={12} sm={4} md={6}>
-                <img src={imgDetail} alt="" 
+                <img src={rct} alt="" 
                 style={{
                     width: '100%',
                 }}
@@ -73,7 +71,7 @@ const GetStarted = () => {
                 order: {xs: 4, sm: 4, md: 3}
             }}
             >
-                <img src={imgDetail2} alt="" 
+                <img src={materialUI} alt="" 
                 style={{ 
                     width: "100%",
                 }}
@@ -92,14 +90,13 @@ const GetStarted = () => {
                 >
                     <Title
                     text={
-                        'Match with the best agent'
+                        'Beautified Using Material UI'
                         
                     }
                     textAlign={'start'}
                     />
                     <CustomTypography>
-                        Our verified partner Agents are local experts who<br /> 
-                        earn an average of 4.8/5 stars from buyers and sellers.
+                    Material-UI is a widely-used React component library that implements Google's Material Design guidelines, providing a consistent and modern look for web applications.<br/> It offers a comprehensive set of customizable components, enabling developers to build responsive and aesthetically pleasing user interfaces with ease. <br/>Material-UI's theming capabilities allow for easy customization to match the design requirements of any project.
                     </CustomTypography>
                 </Box>
             </CustomGridItem>
