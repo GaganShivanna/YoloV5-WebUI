@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
-import  ThemeContextProvider  from '../../landing-page-template/src/components/ThemeContext';
+import  ThemeContextProvider  from '../src/components/ThemeContext';
 
 
 const domain = process.env.REACT_APP_AUTH_DOMAIN;
